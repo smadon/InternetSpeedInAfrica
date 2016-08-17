@@ -1,0 +1,329 @@
+<html>
+<head>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+	
+	<!--------------------------------------------------------------------------->
+	<title>Internet Speed in Africa</title>
+	
+<!-- Tab icon -->
+<link rel='icon' href='http://www.internetspeedinafrica.org/InternetSpeedinAfrica.ico' type='image/ico'/> 
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+  <![endif]-->
+  <link rel="stylesheet" href="http://www.internetspeedinafrica.org/css/internetspeedinafrica.css" />
+
+  
+  <!-- Header include and title are below -->
+  <!--#set var="pagetitle" value="Internet Speed In Africa" -->
+</head>
+
+<body id='body'>
+  <div id='map'></div>
+  <div id='nsrcTitle'> 
+    <!-- <div class='mapTitle'>	</div> -->
+    <div class='left'><a href="http://www.internetspeedinafrica.org"  style="text-decoration: none">
+	<img src="http://www.internetspeedinafrica.org/InternetSpeedinAfrica.png" >	</a> <br/>
+	
+	<!-- Source: simplesharebuttons.com  -->
+	<div id="share-buttons">
+		<!-- Email -->
+		<a href="mailto:?Subject=Internet Speed in Africa&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 http://www.internetspeedinafrica.org"><img src="http://www.internetspeedinafrica.org/images/email.png" alt="Email" /></a>
+		<!-- Facebook -->
+		<a href="http://www.facebook.com/sharer.php?u=http://www.internetspeedinafrica.org" onClick="poptastic(this.href); return false;"><img src="http://www.internetspeedinafrica.org/images/facebook.png" alt="Facebook" /></a>
+		<!-- Google+ -->
+		<a href="https://plus.google.com/share?url=http://www.internetspeedinafrica.org" onClick="poptastic(this.href); return false;"><img src="http://www.internetspeedinafrica.org/images/google.png" alt="Google" /></a>
+		<!-- LinkedIn -->
+		<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.internetspeedinafrica.org" onClick="poptastic(this.href); return false;"><img src="http://www.internetspeedinafrica.org/images/linkedin.png" alt="LinkedIn" /></a>
+		<!-- Pinterest -->
+		<a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img src="http://www.internetspeedinafrica.org/images/pinterest.png" alt="Pinterest" /></a>
+		<!-- Twitter -->
+		<a href="https://twitter.com/share?url=http://www.internetspeedinafrica.org&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons" onClick="poptastic(this.href); return false;"><img src="http://www.internetspeedinafrica.org/images/twitter.png" alt="Twitter" /></a>	
+		<!-- Print 
+		<a href="javascript:;" onclick="window.print()">
+			<img src="http://www.internetspeedinafrica.org/images/print.png" alt="Print" />
+		</a> -->
+		<!-- Reddit
+		<a href="http://reddit.com/submit?url=http://www.internetspeedinafrica.org&amp;title=Internet Speed in Africa" onClick="poptastic(this.href); return false;">
+			<img src="http://www.internetspeedinafrica.org/images/reddit.png" alt="Reddit" />
+		</a> -->
+		<!-- StumbleUpon
+		<a href="http://www.stumbleupon.com/submit?url=http://www.internetspeedinafrica.org&amp;title=Internet Speed in Africa" target="_blank">
+			<img src="http://www.internetspeedinafrica.org/images/stumbleupon.png" alt="StumbleUpon" />
+		</a> -->
+		<!-- Tumblr 
+		<a href="http://www.tumblr.com/share/link?url=http://www.internetspeedinafrica.org&amp;title=Internet Speed in Africa" target="_blank">
+			<img src="http://www.internetspeedinafrica.org/images/tumblr.png" alt="Tumblr" />
+		</a> --> 
+		<!-- VK 
+		<a href="http://vkontakte.ru/share.php?url=http://www.internetspeedinafrica.org" target="_blank">
+			<img src="http://www.internetspeedinafrica.org/images/vk.png" alt="VK" />
+		</a> -->	
+		<!-- Yummly 
+		<a href="http://www.yummly.com/urb/verify?url=http://www.internetspeedinafrica.org&amp;title=Internet Speed in Africa" target="_blank">
+			<img src="http://www.internetspeedinafrica.org/images/yummly.png" alt="Yummly" />
+		</a> -->
+		<!-- Buffer
+		<a href="https://bufferapp.com/add?url=http://www.internetspeedinafrica.org&amp;text=Internet Speed in Africa" onClick="poptastic(this.href); return false;">
+			<img src="http://www.internetspeedinafrica.org/images/buffer.png" alt="Buffer" />
+		</a> -->
+		<!-- Digg 
+		<a href="http://www.digg.com/submit?url=http://www.internetspeedinafrica.org" onClick="poptastic(this.href); return false;">
+			<img src="http://www.internetspeedinafrica.org/images/diggit.png" alt="Digg" />
+		</a> -->		
+	</div>
+
+	</div>
+    <div class='mapLinks'>
+      <div class='left'><a href="#aftAbout">About</a></div>
+      <div class='right'><a href="#aftRepositories">Repositories</a></div>
+   <!--   Speed TEST - NOT READY YET
+   <div class='left'><a href="#aftSpeedTest">SpeedTest</a></div>	
+   -->   
+  <!--    <div class='left'><a href="#topFiveContainer">Recent Updates</a></div> -->
+    </div>
+  </div>
+ 	
+	<div><a href="#body" id="access_top" class="access_aid">Skip to navigation</a></div>
+
+	<!-- Show - Hide Legends : Source	http://htmldog.com/techniques/showhide/ -->
+	<nav id="main_nav"> 
+		<div class='cartodb-legend choropleth'>	
+		<h3> Legends </h3>
+		Select the information you want to see on the Map:	<BR/><BR/>
+	
+			<a href="#ais1" id="ais1" class="button">Average Internet Speed</a><BR/><BR/>
+				<ul>	
+					<li class="min">512 Kbps</li>
+					<li class="max">10 240 Kbps</li>
+					<li class="graph count_441">
+						<div class="colors">
+						<div class="quartile" style="background-color:#F2D2D3"></div>
+						<div class="quartile" style="background-color:#EBB7B9"></div>
+						<div class="quartile" style="background-color:#E39D9F"></div>
+						<div class="quartile" style="background-color:#DB8286"></div>
+						<div class="quartile" style="background-color:#D4686C"></div>
+						<div class="quartile" style="background-color:#CC4E52"></div>
+						<div class="quartile" style="background-color:#C1373C"></div>	
+						</div>
+					</li>
+				</ul>
+		<br/>
+			<!--			Second Data NOT READY
+		<div>	
+			<a href="#ais2" id="ais2" class="button">Internet Speed from Ookla</a> 	<BR/><BR/>
+				<ul>	
+					<li class="min">512 Kbps</li>
+					<li class="max">10240 Kbps</li>
+					<li class="graph count_441">
+						<div class="colors">
+						<div class="quartile" style="background-color:#F2D2D3"></div>
+						<div class="quartile" style="background-color:#EBB7B9"></div>
+						<div class="quartile" style="background-color:#E39D9F"></div>
+						<div class="quartile" style="background-color:#DB8286"></div>
+						<div class="quartile" style="background-color:#D4686C"></div>
+						<div class="quartile" style="background-color:#CC4E52"></div>
+						<div class="quartile" style="background-color:#C1373C"></div>
+						</div>
+					</li>
+				</ul>		
+		</div> -->
+		<!-- end div_text_container -->	
+		<br/>
+		<div>	
+			<a href="#ais3" id="ais3" class="button">Number of Internet users</a> 	<BR/><BR/>
+			<p>% of internet users of total population</p>
+				<ul>	
+					<li class="min">5%</li>
+					<li class="max">75%</li>
+					<li class="graph count_441">
+						<div class="colors">
+						<div class="quartile" style="background-color:#F1E6F1"></div>
+						<div class="quartile" style="background-color:#D8BBD8"></div>
+						<div class="quartile" style="background-color:#CCA5CC"></div>
+						<div class="quartile" style="background-color:#C08FC0"></div>
+						<div class="quartile" style="background-color:#B379B3"></div>
+						<div class="quartile" style="background-color:#A05AA0"></div>
+						<div class="quartile" style="background-color:#8A4E8A"></div>
+						</div>
+					</li>
+				</ul>
+
+		</div><!-- end div_text_container -->				
+		<hr/>			
+			<div class="text_container">
+				<input type="checkbox" class="roundedOne" value="sof" id="sof" name="sof" />
+				<label for="roundedOne">Undersea Fibre Optic Cables</label>
+			<div>
+				<ul>
+					<li class="min">60Gbps</li><li class="max">5Tbps</li>
+					<li class="graph count_7">
+						<div class="colors">
+						<div class="quartile" style="background-color:#EDF8FB"></div>
+						<div class="quartile" style="background-color:#D7FAF4"></div>
+						<div class="quartile" style="background-color:#CCECE6"></div>
+						<div class="quartile" style="background-color:#66C2A4"></div>
+						<div class="quartile" style="background-color:#41AE76"></div>
+						<div class="quartile" style="background-color:#238B45"></div>
+						<div class="quartile" style="background-color:#005824"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			</div>
+		<BR/>	
+			<div class='custom'>	
+			<div class="text_container">	
+				  <input type="checkbox" class="roundedOne" value="tof" id="tof" name="tof" />
+				  <label for="roundedOne">Terrestrial Fibre Cables</label>			
+			<div>
+				<ul>
+					<li>
+						<div class="bullet" style="background:#FF9900"> <div class="bullettext"> Live</div></div>
+					</li> <BR/>
+					<li>
+						<div  class="bullet"  style="background:#D6301D"><div class="bullettext">Under&nbsp;Construction</div></div>
+					</li> 
+				</ul>
+			</div>	
+			</div>	<!--end div_text_container-->				
+			</div>	
+  	<div class='custom'> 
+			<div class="text_container">	
+				  <input type="checkbox" class="roundedOne" value="ipx" id="ipx" name="ipx" />
+				  <label for="roundedOne">Internet Exchange Points</label>				
+			<div>
+				<ul>
+					<li>
+						<div class="bullet" style="background:#FF3300"> <div class="bullettext">Internet&nbsp;Exchange&nbsp;Points</div></div>
+					</li> <BR/>	
+				<!--	 No data Yet
+					<li>
+						<div class="bullet" style="background:#FF3300"> <div class="bullettext">Internet&nbsp;Provider</div></div>
+					</li>	<BR/>	
+				-->
+				</ul>
+			</div>	 
+			</div>	<!--end div_text_container-->				
+			</div>
+		</div>
+		<div><a href="#main_nav" id="access_top" class="access_aid">Skip to top</a></div>
+
+	</nav>
+  
+  <div id="aftAbout" class="modalDialog">
+      <div> <a href="#close" title="Close" class="close">X</a>
+            <h2>About Internet Speed In Africa</h2>
+            <p>"Internet Speed In Africa" is a mapping project that will show various information on the connectivity in Africa.
+				The goal is to provide a platform to see all the data related to Internet connectivity.<br/>
+				For now, you can see the average Internet Speed in all 54 african countries based on Akamai report. On the other layer, you can see information about terrestrial optical fiber, undersea cable fibre and Internet Exchange points. <br/>
+				More information will come over time (Internet Service Provider and different sources of Internet Speed). Stay tuned... <br/>
+				this web site was initially developed  during a study project.</a>
+			the web site is hosted and supported by the <a href="https://www.infomaniak.ch">Infomaniak</a></p>  
+		    <p>The source code for this website can be <a href="https://github.com/smadon/InternetSpeedInAfrica">found on Github</a> and is available under a <a href="https://en.wikipedia.org/wiki/GNU_General_Public_License">General Public License</a></p>
+      </div>
+  </div>
+  <div id="aftRepositories" class="modalDialog">
+      <div> <a href="#close" title="Close" class="close">X</a>
+          <h2>Repositories</h2>
+			  <p>"Internet Speed in Africa" is an Open Data initiative with data sources available for public download.</p>
+			  <p>Below are the sources:</p>
+			  <p>Internet Speed Test: <a href="https://www.akamai.com/uk/en/our-thinking/state-of-the-internet-report/" target="_blank">State of the Internet</a> <BR>
+			  	  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=csv&amp;q=SELECT+*+FROM+internetspeedinafricadata" target="_blank">CSV</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=shp&amp;q=SELECT+*+FROM+internetspeedinafricadata" target="_blank">SHP</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=kml&amp;q=SELECT+*+FROM+internetspeedinafricadata" target="_blank">KML</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=geojson&amp;q=SELECT+*+FROM+internetspeedinafricadata" target="_blank">GEO JSON</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=svg&amp;q=SELECT+*+FROM+internetspeedinafricadata" target="_blank">SVG</a>]
+			 	  </p> 			  
+			  <p>Submarine Cable information: <a href="http://cablemap.info" target="_blank">Gregs Cable Map</a>  <BR>
+				  [<a href="http://cablemap.info/gregs_cable_map_v1.58.zip" target="_blank">KML Data</a>]
+			  </p>
+			  <p>Terrestrial Optical Fibre information: <a href="https://manypossibilities.net/2016/02/afterfibre-2016/" target="_blank">Afterfibre</a> <BR>
+			  	  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=csv&amp;q=SELECT+*+FROM+af_fibrephase" target="_blank">CSV</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=shp&amp;q=SELECT+*+FROM+af_fibrephase" target="_blank">SHP</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=kml&amp;q=SELECT+*+FROM+af_fibrephase" target="_blank">KML</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=geojson&amp;q=SELECT+*+FROM+af_fibrephase" target="_blank">GEO JSON</a>] |
+				  [<a href="http://heritierdamien.cartodb.com/api/v2/sql?format=svg&amp;q=SELECT+*+FROM+af_fibrephase" target="_blank">SVG</a>]
+			  </p>
+			  <p>Internet Exchange Provider: <a href="https://www.telegeography.com" target="_blank">Telegeography</a> <BR>
+			      [<a href="https://raw.githubusercontent.com/telegeography/www.internetexchangemap.com/master/production/api/v1/buildings.geojson" target="_blank">GEO JSON</a>] |
+			  </p>
+			  <!-- Speed Test not ready
+			  <p>Average Internet Speed Test: </p>   		
+			  <p>Speed Test: Adapted from <a href="http://www.brandonchecketts.com/speedtest/" target="_blank">Brandon Checketts</a> </p>  
+ 			  -->
+      </div>
+  </div>
+  <div id="aftSpeedTest" class="modalDialog">
+      <div> <a href="#close" title="Close" class="close">X</a>
+          <h2>Speed Test</h2>
+          <p>Futur Speed Test</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+      </div>
+  </div> 
+  <div id="topFiveContainer" class="modalDialog2">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <div id="topFiveList">
+        </div>
+      </div>
+  </div>
+  
+ <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+
+ <!-- Java Script for Map Style --> 
+   <script src="js/mapStyles.js"></script>
+ <!-- Java Script with all the Map info of CartoDB -->
+  <script src="js/internetspeedinafrica_map.js"></script>
+ <!-- Java Script with all the Map info of CartoDB - v1 -->  
+  <!-- <script src="js/internetspeedinafrica_map-v1.js"></script>   -->
+
+  
+ <!-- Call Jquery for the Hidden Zone -->
+ <script type="text/rocketscript" data-rocketsrc="http://code.jquery.com/jquery-1.7.min.js"></script>
+ 
+ <script type="text/javascript">
+  	// Script to show and Hide the Sub Legend
+	// Source: https://alexcican.com/post/hide-and-show-div/	
+    $(document).ready(function(){
+        $('.text_container').addClass("hidden");
+
+        $('.text_container').click(function() {
+            var $this = $(this);
+
+            if ($this.hasClass("hidden")) {
+                $(this).removeClass("hidden").addClass("visible");
+
+            } else {
+                $(this).removeClass("visible").addClass("hidden");
+            }
+        });
+    });
+  
+  
+	// Script to show and Hide the Legend
+	// Source: http://htmldog.com/techniques/showhide/	
+	
+	var nav = document.getElementById('access_nav'),
+    body = document.body;
+
+	nav.addEventListener('click', function(e) {
+		body.className = body.className? '' : 'with_nav';
+		e.preventDefault();
+	});
+</script>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-78441424-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
