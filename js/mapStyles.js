@@ -7,7 +7,7 @@ app.mapStyles = (function(){
   ais1 : '#internetspeedinafricadata {' +
                                 'polygon-fill: #F2D2D3;' +
                                 'polygon-opacity: 0.8;' +
-                                'line-color: #000;' +
+                                'line-color: #FFF;' +
                                 'line-width: 0.5;' +
                                 'line-opacity: 1;' +
                               '}' +
